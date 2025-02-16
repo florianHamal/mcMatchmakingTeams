@@ -5,6 +5,7 @@ import at.flori4n.mcmatchmakingteams.McMatchmakingTeams;
 import at.flori4n.mcmatchmakingteams.State;
 import at.flori4n.mcmatchmakingteams.Team;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
 import org.github.paperspigot.Title;
@@ -31,8 +32,10 @@ public class GameOverState implements State {
         for (Player player: Bukkit.getOnlinePlayers()){
             player.sendTitle(new Title("§2Team "+winner.getName()+"§2 hat gewonnen",players,1*20,10*20,1*20));
         }
-        Bukkit.broadcastMessage(winner.getName()+" hat gewonnen");
-        Bukkit.broadcastMessage("--> "+players);
+        Bukkit.broadcastMessage("#------------------------------#\n"+
+                "§2Team "+ ChatColor.GOLD+winner.getName()+"§2 hat gewonnen\n " +
+                "--> "+players +"\n" +
+                "#------------------------------#");
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(McMatchmakingTeams.getPlugin(), new Runnable() {
             int counter = 20;
