@@ -31,6 +31,8 @@ public class GameOverState implements State {
         for (Player player: Bukkit.getOnlinePlayers()){
             player.sendTitle(new Title("§2Team "+winner.getName()+"§2 hat gewonnen",players,1*20,10*20,1*20));
         }
+        Bukkit.broadcastMessage(winner.getName()+" hat gewonnen");
+        Bukkit.broadcastMessage("--> "+players);
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(McMatchmakingTeams.getPlugin(), new Runnable() {
             int counter = 20;
