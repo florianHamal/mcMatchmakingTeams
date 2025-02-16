@@ -2,7 +2,7 @@ package at.flori4n.mcmatchmakingteams;
 
 import at.flori4n.mcmatchmakingteams.commands.Commands;
 import at.flori4n.mcmatchmakingteams.commands.StartCommand;
-import at.flori4n.mcmatchmakingteams.states.inGame.LobbyState;
+import at.flori4n.mcmatchmakingteams.states.lobby.LobbyState;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 

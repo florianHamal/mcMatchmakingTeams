@@ -1,7 +1,7 @@
-package at.flori4n.mcmatchmakingteams.states.inGame;
+package at.flori4n.mcmatchmakingteams.states.lobby;
 
 import at.flori4n.mcmatchmakingteams.*;
-import at.flori4n.mcmatchmakingteams.states.lobby.InGameState;
+import at.flori4n.mcmatchmakingteams.states.inGame.InGameState;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;

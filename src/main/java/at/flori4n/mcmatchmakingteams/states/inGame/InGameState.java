@@ -1,17 +1,11 @@
-package at.flori4n.mcmatchmakingteams.states.lobby;
+package at.flori4n.mcmatchmakingteams.states.inGame;
 
 
 import at.flori4n.mcmatchmakingteams.*;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
-import org.bukkit.Location;
-import org.bukkit.entity.ArmorStand;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
-import org.bukkit.metadata.FixedMetadataValue;
-
-import java.util.Random;
 
 public class InGameState implements State {
     InGameListeners inGameListeners = new InGameListeners();

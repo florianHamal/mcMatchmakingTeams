@@ -1,4 +1,4 @@
-package at.flori4n.mcmatchmakingteams.states.lobby;
+package at.flori4n.mcmatchmakingteams.states.inGame;
 
 
 import at.flori4n.mcmatchmakingteams.GameData;

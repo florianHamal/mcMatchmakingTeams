@@ -2,7 +2,7 @@ package at.flori4n.mcmatchmakingteams.commands;
 
 
 import at.flori4n.mcmatchmakingteams.Manager;
-import at.flori4n.mcmatchmakingteams.states.lobby.InGameState;
+import at.flori4n.mcmatchmakingteams.states.inGame.InGameState;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
