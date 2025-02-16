@@ -35,7 +35,7 @@ public class GameOverState implements State {
         Bukkit.broadcastMessage("#------------------------------#\n"+
                 "§2Team "+ ChatColor.GOLD+winner.getName()+"§2 hat gewonnen\n " +
                 "-> "+players +" <-\n" +
-                ChatColor.GRAY+"#------------------------------#");
+                ChatColor.WHITE +"#------------------------------#");
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(McMatchmakingTeams.getPlugin(), new Runnable() {
             int counter = 20;
