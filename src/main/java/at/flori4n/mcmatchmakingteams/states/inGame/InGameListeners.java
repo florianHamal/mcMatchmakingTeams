@@ -16,6 +16,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.weather.WeatherChangeEvent;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -59,14 +60,20 @@ public class InGameListeners implements Listener {
         if (team.getLives()<=0){
             player.setGameMode(GameMode.SPECTATOR);
             team.getLivingPlayers().remove(player);
-            player.setGameMode(GameMode.SPECTATOR);
             checkWin();
         }else {
             team.setLives(team.getLives() - 1);
         }
     }
     public void checkWin(){
-        List<Team> teamsAlive = gameData.getTeams().stream().filter(t -> !t.getLivingPlayers().isEmpty()).collect(Collectors.toList());
-        if (teamsAlive.size()==1)Manager.getInstance().setState(new GameOverState(teamsAlive.get(0)));
+        List<Team> livingTeams = new ArrayList<>();
+        for(Team team : gameData.getTeams()){
+            if (team.getLivingPlayers().size()>0) {
+                livingTeams.add(team);
+            }
+        }
+        if (livingTeams.size()==1) {
+            Manager.getInstance().setState(new GameOverState(livingTeams.get(0)));
+        }
     }
 }
