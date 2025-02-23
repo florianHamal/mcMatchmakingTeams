@@ -59,6 +59,7 @@ public class InGameListeners implements Listener {
         if (team.getLives()<=0){
             player.setGameMode(GameMode.SPECTATOR);
             team.getLivingPlayers().remove(player);
+            player.setGameMode(GameMode.SPECTATOR);
             checkWin();
         }else {
             team.setLives(team.getLives() - 1);
