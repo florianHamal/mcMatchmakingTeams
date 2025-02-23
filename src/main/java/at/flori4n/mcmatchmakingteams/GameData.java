@@ -113,7 +113,8 @@ public class GameData {
 
     private GameData() {
         load();
-        maxPlayers = (int) teams.stream().map(Team::getSize).count();
+        maxPlayers = 0;
+        teams.stream().forEach(t->maxPlayers+=t.getSize());
         if (switchSpawns)switchSpawns();
     }
     public void switchSpawns(){
