@@ -41,6 +41,10 @@ public class Team {
     }
 
     public void addPlayer(OfflinePlayer player){
+        Team prevTeam = GameData.getInstance().getPlayerTeam((Player)player);
+        if (prevTeam!=null) {
+            prevTeam.removePlayer(player);
+        }
         if (isFull())throw new RuntimeException("teamIstVoll");
         livingPlayers.add((Player) player);
         team.addEntry(player.getName());
